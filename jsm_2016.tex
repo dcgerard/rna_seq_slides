@@ -1,0 +1,58 @@
+%\documentclass[handout]{beamer}
+\documentclass[evncountsect]{beamer}
+\usepackage{amsmath,algorithm,algorithmic,graphicx,amsfonts,amsthm,color,pgf,tikz,wrapfig,amsfonts,multicol,wasysym,animate}
+\usepackage[absolute,overlay]{textpos}
+\usetikzlibrary{arrows}
+\beamertemplatenavigationsymbolsempty
+\setbeamercovered{transparent = 0}
+\useoutertheme[subsection=false]{miniframes}
+\bibliographystyle{apalike}
+\setlength{\fboxrule}{1pt}
+
+\title{RNA-seq and Adaptive Shrinkage}
+\author{Mengyin Lu and David Gerard}
+\institute[UChicago]{
+  Department of Human Genetics\\
+  University of Chicago\\
+  Boss: Matthew Stephens
+}
+\date[June 2016]{June, 2016}
+
+% available at https://github.com/matze/mtheme
+\usetheme{metropolis}
+
+\begin{document}
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{What is RNA-seq?}
+\end{frame}
+
+\begin{frame}{Three Problems}
+  \begin{enumerate}
+  \item Count Data: Not normal. How do we deal with this?
+  \item Small Sample Sizes: Low power. How do we deal with this?
+  \item Unobserved Variables: Can ruin analyses. How do we deal with this?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Our Work}
+  \begin{enumerate}
+  \item Count Data: Develop optimal pipelines (VOOM-LIMMA)
+  \item Small Sample Sizes:
+    \begin{enumerate}
+    \item Harness the power of ASH.
+    \item Borrow strength between variables.
+    \end{enumerate}
+  \item Unobserved Variables:
+    \begin{enumerate}
+    \item Integrate ``factor-augmented regression'' models with the shrinkage ideas from ASH.
+    \item Modify known approaches to optimize the performance of ASH.
+    \end{enumerate}
+  \end{enumerate}
+\end{frame}
+
+\end{document}
