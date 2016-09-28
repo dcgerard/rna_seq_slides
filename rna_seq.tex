@@ -28,17 +28,40 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{What is RNA-seq?}
-\end{frame}
-
-\begin{frame}{Why do we care?}
-\end{frame}
-
-\begin{frame}{Three Problems}
+\begin{frame}{RNA-seq}
+  What is RNA-seq?
   \begin{enumerate}
-  \item Count Data: Not normal. How do we deal with this?
-  \item Small Sample Sizes: Low power. How do we deal with this?
-  \item Unobserved Variables: Can ruin analyses. How do we deal with this?
+  \item Each cell in our body contains a population of RNA fragments.
+  \item RNA-seq uses next-gen sequencing to measure the relative expression of genes.
+  \item Relative differences in the concentrations of these RNA fragments between groups tells us interesting things. 
+    \begin{enumerate}
+    \item Which genes are influenced by a drug?
+    \item How do cancer patients differ from non-cancer patients?
+    \item Which genes are important in liver tissue versus muscle tissue?
+    \end{enumerate}
+  \item Many improvements over older technology.
+  \end{enumerate}
+
+  % Improvements over older technology:
+  % \begin{enumerate}
+  % \item Do not need prior knowledge of a gene to measure its expression level.
+  % \item Can compare genes within a sample.
+  % \item More accurate measurements of low/high expressed genes.
+  % \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Many Problems}
+  \begin{enumerate}
+  \item Count Data: A new type of data that requires new normalization
+    procedures/pipelines.
+  \item Small Sample Sizes: Low power. Hard to detect differences between groups.
+  \item Unobserved Variables: Can ruin analyses. Can make results uninterpretable.
+    \begin{enumerate}
+    \item Which lab/technician processed a sample?
+    \item The ancestry of the sample.
+    \item Subject attributes such as age or sex.
+    \end{enumerate}
   \end{enumerate}
 \end{frame}
 
