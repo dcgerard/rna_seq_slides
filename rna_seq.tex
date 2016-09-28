@@ -10,7 +10,7 @@
 \setlength{\fboxrule}{1pt}
 
 \title{RNA-seq and Adaptive Shrinkage}
-\author{Mengyin Lu and David Gerard}
+\author{David Gerard and Mengyin Lu}
 \institute[UChicago]{
   Department of Human Genetics\\
   University of Chicago\\
@@ -31,15 +31,15 @@
 \begin{frame}{RNA-seq}
   What is RNA-seq?
   \begin{enumerate}
-  \item Each cell in our body contains a population of RNA fragments
-    which are expressed by genes.
+  \item Each cell in our body contains a population of RNA fragments. \medskip
+  \item These RNA fragments are the output (``expression'') of genes.\medskip
   \item RNA-seq uses next-gen sequencing to measure the relative
-    expression of genes.
+    expression of genes within a sample.\medskip
   \item Relative differences in the concentrations of these RNA
-    fragments between groups tells us interesting things.
+    fragments between groups tell us interesting things:
     \begin{enumerate}
-    \item Which genes are influenced by a drug?
-    \item How do cancer patients differ from non-cancer patients?
+    \item Which genes are influenced by a drug?\smallskip
+    \item How do cancer patients differ from non-cancer patients?\smallskip
     \item Which genes are important in liver tissue versus muscle tissue?
     \end{enumerate}
   \end{enumerate}
@@ -56,12 +56,12 @@
 \begin{frame}{Many Problems}
   \begin{enumerate}
   \item Count Data: A new type of data that requires new normalization
-    procedures/pipelines.
-  \item Small Sample Sizes: Low power. Hard to detect differences between groups.
+    procedures/pipelines.\medskip
+  \item Small Sample Sizes: Low power. Hard to detect differences between groups.\medskip
   \item Unobserved Variables: Can ruin analyses. Can make results uninterpretable.
     \begin{enumerate}
-    \item Which lab/technician processed a sample?
-    \item The ancestry of the sample.
+    \item Which lab/technician processed a sample?\smallskip
+    \item The ancestry of the sample.\smallskip
     \item Subject attributes such as age or sex.
     \end{enumerate}
   \end{enumerate}
@@ -69,15 +69,16 @@
 
 \begin{frame}{Our Work}
   \begin{enumerate}
-  \item Count Data: Develop optimal pipelines (VOOM-LIMMA)
+  \item Count Data: Develop optimal pipelines for analysis.\medskip
   \item Small Sample Sizes:
     \begin{enumerate}
-    \item Harness the power of ASH.
+    \item Harness the power of ASH.\smallskip
     \item Borrow strength between variables.
-    \end{enumerate}
+    \end{enumerate}\medskip
   \item Unobserved Variables:
     \begin{enumerate}
-    \item Integrate ``factor-augmented regression'' models with the shrinkage ideas from ASH.
+    \item Integrate ``factor-augmented regression'' models with the
+      shrinkage ideas from ASH. \smallskip
     \item Modify known approaches to optimize the performance of ASH.
     \end{enumerate}
   \end{enumerate}
